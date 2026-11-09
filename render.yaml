@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: balancevault-api
+    runtime: node
+    rootDir: .
+    buildCommand: npm install --workspace backend
+    startCommand: npm run start --workspace backend
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: RUN_MIGRATIONS
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false   # paste your Neon connection string in the Render dashboard
+      - key: REDIS_URL
+        sync: false   # optional: Upstash/Render Redis URL; empty = in-memory limiter
+      - key: CORS_ORIGIN
+        sync: false   # your Vercel URL, e.g. https://balancevault.vercel.app
+      - key: BOOTSTRAP_TOKEN
+        sync: false   # optional; leave empty to disable the bootstrap endpoint

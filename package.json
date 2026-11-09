@@ -1,0 +1,13 @@
+{
+  "name": "balancevault",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "migrate": "npm run migrate -w backend",
+    "create-admin": "npm run create-admin -w backend",
+    "test": "npm test -w backend",
+    "build": "npm run build -w frontend"
+  }
+}
