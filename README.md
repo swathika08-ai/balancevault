@@ -89,8 +89,8 @@ Update this table only with things you have actually run and seen work. Do not t
 | Check | Verified? |
 |---|---|
 | `npm test` passes locally against a throwaway Postgres | [✅] |
-| Backend deployed, `/healthz` and `/readyz` return 200 | [ ] |
-| First admin created on the live database | [ ] |
-| Admin login works on the live site | [ ] |
-| Register -> onboard -> approve -> deposit/transfer works on the live site | [ ] |
-| Audit "Verify hash chain" shows intact on the live site | [ ] |
+| Backend deployed, `/healthz` and `/readyz` return 200 | [✅] |
+| First admin created on the live database | [✅] |
+| Admin login works on the live site | [✅] |
+| Register -> onboard -> approve -> deposit/transfer works on the live site | [✅] |
+| Audit "Verify hash chain" shows intact on the live site | [✅] |
